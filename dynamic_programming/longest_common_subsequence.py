@@ -23,9 +23,9 @@ def lcs(x, y):
             j -= 1
         else:
             assert x[i-1] == y[j-1]
-            seq = seq + x[i-1]
-            x -= 1
-            y -= 1
+            seq = x[i-1] + seq
+            i -= 1
+            j -= 1
     
     return  L[m][n], seq
 
