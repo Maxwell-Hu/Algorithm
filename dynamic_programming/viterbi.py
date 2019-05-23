@@ -4,7 +4,7 @@ def viterbi(obs, states, start_p, trans_p, emit_p):
 
     # initialize base case in t = 0
     for y in states:
-        V[0][y] = start_p[y] * emit_p[y][obs[0]]
+        V[0][y] = start_p[y] * emit_p[y][obs[0]] # V[t][y]表示t时刻，由 状态y 得到观测结果obs[t]的概率
         path[y] = [y]
 
     # iterable while t > 0
